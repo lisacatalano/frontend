@@ -1,0 +1,112 @@
+// Only hide overflow on home page so no scroll bars
+.homepage .wrapper {
+  overflow: hidden;
+}
+
+.home {
+  position: relative;
+}
+
+.asterisk {
+  position: absolute;
+}
+
+.asterisk svg {
+  height: 80vh;
+  margin-left: -5em;
+
+  transform: rotate(17deg);
+
+  animation: fadein 2s linear forwards,
+    spin 6s cubic-bezier(0.19, 0.06, 0.71, 1.26) 1.5s forwards;
+
+  @media screen and (max-width: 1200px) {
+    max-height: 75vh;
+  }
+
+  @media screen and (max-width: 900px) {
+    left: -40%;
+    max-height: 60vh;
+  }
+
+  @media screen and (max-width: 680px) {
+    left: -50%;
+    max-height: 50vh;
+  }
+
+  @media screen and (max-width: 500px) {
+    max-height: 25vh;
+  }
+
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    display: none;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(17deg);
+  }
+  15% {
+    transform: rotate(89deg);
+  }
+  33% {
+    transform: rotate(89deg);
+  }
+  48% {
+    transform: rotate(161deg);
+  }
+  66% {
+    transform: rotate(161deg);
+  }
+  81% {
+    transform: rotate(233deg);
+  }
+  100% {
+    transform: rotate(233deg);
+  }
+}
+
+.headline {
+  list-style: none;
+  font-size: 3em;
+  line-height: 2em;
+  margin: 0 5% 0 0;
+  position: absolute;
+  right: 5%;
+
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    display: flex;
+    right: unset;
+    justify-content: space-between;
+  }
+}
+
+.word1,
+.word2,
+.word3 {
+  opacity: 0;
+
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    margin: 0.5em;
+  }
+}
+
+.word1 {
+  animation: fadein 2s linear 2s forwards;
+}
+.word2 {
+  animation: fadein 2s linear 4s forwards;
+}
+.word3 {
+  animation: fadein 2s linear 6s forwards;
+}

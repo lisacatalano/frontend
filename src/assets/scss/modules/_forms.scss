@@ -1,0 +1,29 @@
+.form label {
+  display: block;
+  font-weight: 400;
+  width: 100%;
+}
+
+.form input,
+.form textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 1em;
+  border: unset;
+}
+
+.form .submit {
+  width: unset;
+  background: white;
+  color: $color-brand;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 0;
+  padding: 10px 15px;
+}
+
+.error {
+  background-color: #fb988d;
+}

@@ -1,0 +1,61 @@
+.wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+
+.logo {
+  min-width: 250px;
+  max-width: 400px;
+  width: 25%;
+}
+
+// Page specific CSS
+.about,
+.contact,
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  max-width: 45em;
+  padding: 2em;
+}
+
+.contact {
+  max-width: 45em;
+  padding: 0 2em;
+  margin: 0 auto 1em;
+  align-items: stretch;
+}
+
+// Smaller screen tweaks
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 1em;
+  }
+
+  header {
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 1em;
+  }
+
+  .navigation {
+    justify-content: space-between;
+  }
+
+  .content {
+    padding: 1em;
+  }
+}
